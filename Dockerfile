@@ -7,6 +7,9 @@ WORKDIR /app
 # 复制 requirements.txt 文件并安装依赖项
 COPY requirements.txt requirements.txt
 
+# 创建新的 sources.list 文件并使用备用的 Debian 镜像源
+RUN echo "deb http://ftp.de.debian.org/debian stable main" > /etc/apt/sources.list
+
 # 安装CMake和其他依赖项
 RUN apt-get update && apt-get install -y \
     cmake \
