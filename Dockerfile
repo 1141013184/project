@@ -8,7 +8,12 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 
 # 安装CMake和其他依赖项
-RUN apt-get update && apt-get install -y cmake && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y \
+    cmake \
+    build-essential \
+    libgtk2.0-dev \
+    libboost-all-dev \
+    && rm -rf /var/lib/apt/lists/*
 
 # 安装 Python 依赖项
 RUN pip install --upgrade pip && pip install -r requirements.txt
