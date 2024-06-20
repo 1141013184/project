@@ -3,7 +3,7 @@ Markdown==3.6
 MarkupSafe==2.1.5
 Pillow==10.3.0
 PyQt5==5.15.10
-PyQt5-Qt5==5.15.14
+PyQt5-Qt5==5.15.2  # 更新为可用版本
 PyQt5-sip==12.13.0
 PySocks==1.7.1
 absl-py==2.1.0
